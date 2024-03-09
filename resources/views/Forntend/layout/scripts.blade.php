@@ -1,0 +1,13 @@
+<script src="{{asset('forntend/js/jquery-3.6.1.min.js')}}"></script>
+        <script src="{{asset('forntend/js/bootstrap.min.js')}}"></script>
+        <script src="{{asset('forntend/js/bootstrap-datepicker.min.js')}}"></script>
+        <!--<script src="js/jquery-ui.js"></script>-->
+        <script src="{{asset('forntend/js/jquery.magnific-popup.min.js')}}"></script>
+        <script src="{{asset('forntend/js/owl.carousel.min.js')}}"></script>
+        <script src="{{asset('forntend/js/wow.min.js')}}"></script>
+        <script src="{{asset('forntend/js/select2.full.js')}}"></script>
+        <script src="{{asset('forntend/js/jquery.waypoints.min.js')}}"></script>
+        <script src="{{asset('forntend/js/moment.min.js')}}"></script>
+        <script src="{{asset('forntend/js/jquery.meanmenu.js')}}"></script>
+        <script src="{{asset('forntend/tinymce/tinymce.min.js')}}"></script>
+        <script src="{{asset('forntend/js/iziToast.min.js')}}"></script>
