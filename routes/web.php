@@ -265,6 +265,8 @@ Route::middleware(['admin:admin'])->group(function () {
     Route::get('/admin/faq/create', [FaqController::class, 'create'])->name('admin_faq_create');
     Route::post('/admin/faq/store', [FaqController::class, 'store'])->name('admin_faq_store');
     Route::get('/admin/faq/edit/{id}', [FaqController::class, 'edit'])->name('admin_faq_edit');
+    Route::post('/admin/faq/update/{id}', [FaqController::class, 'update'])->name('admin_faq_update');
+    Route::get('/admin/faq/delete/{id}', [FaqController::class, 'delete'])->name('admin_faq_delete');
 
 });
 
