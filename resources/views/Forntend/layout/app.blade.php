@@ -23,45 +23,60 @@
             href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
             rel="stylesheet"
         />
-    </head>
-    <body>
-        <div class="top">
-            <div class="container">
-                <div class="row">
+    <!-- Your custom styles -->
+    <style>
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
 
-                <nav class="navbar navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" class="d-inline-block align-text-top">
-      Bootstrap
-    </a>
-  </div>
-</nav>
+        .phone-email {
+            list-style: none;
+            text-align: center;
+            padding: 0;
+        }
 
-                    <div class="col-md-6 left-side">
-                        <ul>
-                            <li class="phone-text text-danger text">00112233223</li>
-                            <li class="email-text text-danger">job@admin.com</li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6 right-side">
-                        <ul class="right text-success">
-                            <li class="menu  ">
-                                <a  href="{{route('login')}}"
-                                    ><i class="fas fa-sign-in-alt  text-success"></i> Login</a
-                                >
-                            </li>
-                            <li class="menu">
-                                <a href="{{route('signup')}}"
-                                    ><i class="fas fa-user  text-success"></i> Sign Up</a
-                                >
-                            </li>
-                        </ul>
-                    </div>
+        .right-side {
+            text-align: right;
+        }
+
+        .menu {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <div class="col-md-4">
+                    <nav class="navbar">
+                        <a class="navbar-brand" href="#">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI2AoTENdsOWiW21lAV8teZTytNBCKULLTWA&usqp=CAU" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                            <span class="logo-text">Job <span class=" text-primary">Pluse</span> </span>
+                        </a>
+                    </nav>
                 </div>
+
+                <div class="col-md-4 phone-email">
+                 
+                </div>
+
+                <div class="col-md-4 ">
+                    <ul class="right text-success">
+                        <li class="menu">
+                            <a href="{{ route('login') }}"><i class="fas fa-sign-in-alt text-success"></i> Login</a>
+                        </li>
+                        <li class="menu">
+                            <a href="{{ route('signup') }}"><i class="fas fa-user text-success"></i> Sign Up</a>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
         </div>
-
+    </div>
 
 
         @include('Forntend.layout.navbar')

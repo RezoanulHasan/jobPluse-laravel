@@ -35,8 +35,8 @@ class SignupPageController extends Controller
        $request->validate([
            'company_name' => 'required',
            'person_name' => 'required',
-           'username' => 'required|unique:companies',
-           'email' => 'required|email||unique:companies',
+           'username' => 'required',
+           'email' => 'required|email',
            'password' => 'required',
            'retype_password' => 'required|same:password'
        ]);
@@ -85,8 +85,8 @@ class SignupPageController extends Controller
    {
        $request->validate([
            'name' => 'required',
-           'username' => 'required|unique:candidates',
-           'email' => 'required|email||unique:candidates',
+           'username' => 'required',
+           'email' => 'required|email',
            'password' => 'required',
            'retype_password' => 'required|same:password'
        ]);

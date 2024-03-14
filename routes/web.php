@@ -20,7 +20,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\OtherPageController;
 use App\Http\Controllers\Admin\WhyChooseController;
 use App\Http\Controllers\Company\CompanyController;
-use App\Http\Controllers\Companay\CompnayController;
+
 use App\Http\Controllers\Admin\ContactPageController;
 use App\Http\Controllers\Admin\JobCategoryController;
 use App\Http\Controllers\Admin\TestimonialController;
@@ -29,6 +29,7 @@ use App\Http\Controllers\Admin\AdminPackageController;
 use App\Http\Controllers\Forntend\LoginPageController;
 use App\Http\Controllers\Admin\PrivacyPolicyController;
 use App\Http\Controllers\Candidate\CandidateController;
+
 use App\Http\Controllers\Forntend\ForgetPageController;
 use App\Http\Controllers\Forntend\SignupPageController;
 use App\Http\Controllers\Forntend\PricingPageController;
@@ -102,6 +103,10 @@ Route::middleware(['company:company'])->group(function() {
     Route::get('/company/paypal/cancel', [CompanyController::class, 'paypal_cancel'])->name('company_paypal_cancel');
 });
 /* Candidate */
+// Candidate Middleware Routes
+Route::middleware(['candidate:candidate'])->group(function() {
+    Route::get('/candidate/dashboard', [CandidateController::class, 'dashboard'])->name('candidate_dashboard');
+
 Route::post('candidate_login_submit', [LoginPageController::class, 'candidate_login_submit'])->name('candidate_login_submit');
 Route::post('candidate_signup_submit', [SignupPageController::class, 'candidate_signup_submit'])->name('candidate_signup_submit');
 Route::get('candidate_signup_verify/{token}/{email}', [SignupPageController::class, 'candidate_signup_verify'])->name('candidate_signup_verify');
@@ -110,11 +115,8 @@ Route::get('forget-password/candidate', [ForgetPageController::class, 'candidate
 Route::post('forget-password/candidate/submit', [ForgetPageController::class, 'candidate_forget_password_submit'])->name('candidate_forget_password_submit');
 Route::get('reset-password/candidate/{token}/{email}', [ForgetPageController::class, 'candidate_reset_password'])->name('candidate_reset_password');
 Route::post('reset-password/candidate/submit', [ForgetPageController::class, 'candidate_reset_password_submit'])->name('candidate_reset_password_submit');
-
-// Candidate Milldleware Routes
-Route::middleware(['candidate:candidate'])->group(function() {
-    Route::get('/candidate/dashboard', [CandidateController::class, 'dashboard'])->name('candidate_dashboard');
 });
+
 // Admin Group routes
 Route::middleware(['admin:admin'])->group(function () {
 

@@ -4,7 +4,7 @@
 @section('seo_meta_description'){{ $other_page_item->login_page_meta_description }}@endsection
 
 @section('main-content')
-<div class="page-top" style="background-image: url('{{ asset('forntend/uploads/banner.jpg') }}')">
+<div class="page-top" style="background-image: url('{{ asset('forntend/uploads/banners.jpeg') }}')">
     <div class="bg"></div>
     <div class="container">
         <div class="row">
@@ -74,10 +74,10 @@
                                 <input type="password" class="form-control" name="password">
                             </div>
                             <div class="mb-3">
-                                <button type="submit" class="btn btn-primary bg-website">
+                                <button type="submit" class="btn btn-primary ">
                                     Login
                                 </button>
-                                <a href="{{ route('candidate_forget_password') }}" class="primary-color">Forget Password?</a>
+                                <a href="{{ route('candidate_forget_password') }}" class="text-primary">Forget Password?</a>
                             </div>
                             </form>
                         </div>
@@ -99,10 +99,10 @@
                                 <input type="password" class="form-control" name="password">
                             </div>
                             <div class="mb-3">
-                                <button type="submit" class="btn btn-primary bg-website">
+                                <button type="submit" class="btn btn-primary ">
                                     Login
                                 </button>
-                                <a href="{{ route('company_forget_password') }}" class="primary-color">
+                                <a href="{{ route('company_forget_password') }}" class="text-primary">
                                     Forget Password?
                                 </a>
                             </div>
@@ -111,7 +111,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <a href="{{ route('signup') }}" class="primary-color"
+                        <a href="{{ route('signup') }}" class="text-primary"
                             >Don't have an account? Create Account</a
                         >
                     </div>

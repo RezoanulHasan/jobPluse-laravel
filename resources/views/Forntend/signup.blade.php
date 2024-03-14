@@ -4,7 +4,7 @@
 @section('seo_meta_description'){{ $other_page_item->signup_page_meta_description }}@endsection
 
 @section('main-content')
-<div class="page-top" style="background-image: url('{{ asset('forntend/uploads/banner.jpg') }}')">
+<div class="page-top" style="background-image: url('{{ asset('forntend/uploads/banners.jpeg') }}')">
     <div class="bg"></div>
     <div class="container">
         <div class="row">
@@ -67,26 +67,26 @@
                             @csrf
                             <div class="mb-3">
                                 <label for="" class="form-label">Candidate Name *</label>
-                                <input type="text" class="form-control" name="name" value="{{ old('name') }}">
+                                <input type="text" class="form-control" name="name" value="{{ ('name') }}">
                             </div>
                             <div class="mb-3">
                                 <label for="" class="form-label">Username *</label>
-                                <input type="text" class="form-control" name="username" value="{{ old('username') }}">
+                                <input type="text" class="form-control" name="username" value="{{ ('username') }}">
                             </div>
                             <div class="mb-3">
                                 <label for="" class="form-label">Email Address *</label>
-                                <input type="text" class="form-control" name="email" value="{{ old('email') }}">
+                                <input type="text" class="form-control" name="email" value="{{ ('email') }}">
                             </div>
                             <div class="mb-3">
                                 <label for="" class="form-label">Password *</label>
-                                <input type="password" class="form-control" name="password">
+                                <input type="password" class="form-control" name="password" autocomplete="new-password">
                             </div>
                             <div class="mb-3">
                                 <label for="" class="form-label">Retype Password *</label>
-                                <input type="password" class="form-control" name="retype_password">
+                                <input type="password" class="form-control" name="retype_password" autocomplete="new-password">
                             </div>
-                            <div class="mb-3">
-                                <button type="submit" class="btn btn-primary bg-website">
+                            <div class="mb-3 ">
+                                <button type="submit" class="btn btn-primary">
                                     Create Account
                                 </button>
                             </div>
@@ -126,7 +126,7 @@
                                 <input type="password" class="form-control" name="retype_password">
                             </div>
                             <div class="mb-3">
-                                <button type="submit" class="btn btn-primary bg-website">
+                                <button type="submit" class="btn btn-primary">
                                     Create Account
                                 </button>
                             </div>
@@ -135,7 +135,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <a href="{{ route('login') }}" class="primary-color"
+                        <a href="{{ route('login') }}" class="text-primary"
                             >Existing User? Login Now</a
                         >
                     </div>
